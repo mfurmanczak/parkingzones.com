@@ -1,5 +1,3 @@
-// editDeleteHandler.js
-
 $(document).ready(function () {
     // Event listener for edit button click
     $('#zoneTable').on('click', '.edit-btn', function () {

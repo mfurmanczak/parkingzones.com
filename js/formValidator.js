@@ -1,5 +1,3 @@
-// formValidator.js
-
 function validateForm() {
     // Retrieve form data
     var zoneName = $('#zoneName').val().trim();

@@ -1,5 +1,3 @@
-// fetchZones.js
-
 $(document).ready(function () {
     // Make AJAX request to getAllZones.php
     $.ajax({

@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    // Function to validate the form
     function validateForm() {
         // Retrieve form data
         var zoneName = $('#zoneName').val().trim();
