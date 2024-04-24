@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title id="title">View Parking Zones</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Work Assignment</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Payment View</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="manage.html">Parking Areas Management</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12">
+                <h1 class="text-center" id="calcTitle">Calculate Parking Fee</h1>
+            </div>
+        </div>
+        <form id="feeForm" action="server/ParkingCalculator.php" method="post">
+            <div class="form-group">
+                <label for="parkingArea">Parking Area</label>
+                <select class="form-control" id="parkingArea" name="parkingArea">
+                    <option value="">Select Parking Area</option>
+                </select>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="js/getZones.js"></script>
+            <script src="js/paymentValidator.js"></script>
+
+            <div class="form-group">
+                <label for="startTime">Start Time</label>
+                <input type="time" class="form-control" id="startTime" name="startTime">
+            </div>
+            <div class="form-group">
+                <label for="endTime">End Time</label>
+                <input type="time" class="form-control" id="endTime" name="endTime">
+            </div>
+            <div class="form-group">
+                <label for="dayOfWeek">Day of the Week</label>
+                <select class="form-control" id="dayOfWeek" name="dayOfWeek">
+                    <option value="">Select Day of the Week</option>
+                    <option value="1">Monday</option>
+                    <option value="2">Tuesday</option>
+                    <option value="3">Wednesday</option>
+                    <option value="4">Thursday</option>
+                    <option value="5">Friday</option>
+                    <option value="6">Saturday</option>
+                    <option value="7">Sunday</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="currency">Currency</label>
+                <select class="form-control" id="currency" name="currency">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="PLN">PLN</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Calculate Fee</button>
+        </form>
+        <div id="fee"></div>
+    </div>
+    <footer>
+        <a href="https://www.exchangerate-api.com">Rates By Exchange Rate API</a>
+    </footer>
+</body>
+
+</html>

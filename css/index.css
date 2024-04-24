@@ -1,0 +1,9 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+}
+
+#calcTitle {
+    margin-top: 20px;
+}
