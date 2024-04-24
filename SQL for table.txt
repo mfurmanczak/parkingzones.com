@@ -1,5 +1,3 @@
-CREATE A TABLE IN YOUR PHPMYADMIN
-
 CREATE TABLE `parking_zone` (
   `Zone_ID` int(11) NOT NULL,
   `Zone_Name` char(50) NOT NULL,
