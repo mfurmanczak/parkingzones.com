@@ -1,3 +1,7 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 CREATE TABLE `parking_zone` (
   `Zone_ID` int(11) NOT NULL,
   `Zone_Name` char(50) NOT NULL,
@@ -5,3 +9,12 @@ CREATE TABLE `parking_zone` (
   `Weekend_Rate` int(11) NOT NULL,
   `Discount` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+ALTER TABLE `parking_zone`
+  ADD PRIMARY KEY (`Zone_ID`);
+
+
+ALTER TABLE `parking_zone`
+  MODIFY `Zone_ID` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
